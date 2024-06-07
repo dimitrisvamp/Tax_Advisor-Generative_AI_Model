@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tax Advisor</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+
+    </head>
+
+
+    <body>
+        
+        <div class="container">
+            <img class="background-image" src={{ url_for('static', filename='background-image/360_F_420487750_CQfocQXxwKw4Bem7feFVCdRlFxeoTU4V.jpg') }}>
+            <h1 class="taxes-advisor">Taxes Advisor</h1>
+            <div class="description">
+                <h4>
+                    A web application that uses AI to provide you basic tax advice based on you income, profit 
+                     and expenses. 
+                </h4>
+            </div>
+
+        </div>
+
+
+        <form action="/submit" method="POST">
+            <div class="data-input">
+                <h3 class="explanation">
+                        Type in the boxes below your income your expenses respectiveley <br> 
+                        so you get from the AI advice about your taxes. <br>
+                        Press the "SUBMIT" button to submit your data and wait until the <br>
+                        the page refreshes. Next press the "ADVICE NOW" button to consult.
+                        
+                </h3>
+
+                <div class="inputs">
+                    <input class="income-input" type="text" id="income" name="income" placeholder="Income" required>
+                    <input class="expenses-input" type="text" id="expenses" name="expenses" placeholder="Expenses" required>
+
+                </div>
+                
+                <div class="submit">
+                    <input class="submit-button" type="submit" value="SUBMIT">
+
+                </div>
+
+                <div class="advice">
+                    <button class="advice-button" type="button" onclick="location.href='/advice'">ADVICE NOW</button>
+        
+                </div>
+
+                <div id="advice-container">
+                    <p class="user-advice"> {{ advice | safe }}</p>
+        
+                 </div>
+
+            </div>
+
+         </form>
+
+         
+
+
+        
+        
+    </body>
+
+
+</html>

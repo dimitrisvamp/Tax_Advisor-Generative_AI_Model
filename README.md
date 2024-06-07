@@ -22,7 +22,9 @@ Once you press the "SUBMIT" button the user will notice that the web page is sta
 (about 20-25 seconds). Thi is happening because of the AI's responding time. In the database when u press "SUBMIT"
 button, are going to be inserted three values (income value, expenses value, advice). The application uses REST API, implemented with 
 flask ( https://flask.palletsprojects.com/en/3.0.x/ ) and specifically "POST" endpoint, to get the income and expenses values 
-from html file.  Then the application utilizes the generative AI model to generate an advice based on theese values.
+from html file.  Then the application utilizes the generative AI model to generate an advice based on theese values according to the project's needs
+( e.g propert questions that a user could make to get back advice for his taxes payments, how much money he could save for his retirement and personal
+entertainment, what he can do to reduce his taxes or how he can invest money ).
 Subsequently theese vaules (income, expenses, advice) are inserted into database.  <br>
 
 After the page refreshes, the user should press the "ADVICE NOW" button. Because the advice is already generated,
@@ -30,11 +32,21 @@ the only thing that application should do is to select the advice from the datab
 with the last id. Then the application uses the REST API "GET" endpoint to pass the advice to html file and represent it
 to user below the "SUBMIT" and "ADVICE NOW" buttons.
 
+## Uploaded Files
+- model folder:
+  - dbCreator.py ( This python file creates the database and the table for taxes if they don't exist or makes they connection to the database and taxes table if they exist )
+  - model.py ( This python file integrates the generative AI model that openai provides according to our dependences )
+  - RestAPI.py ( This python file is the REST API that communicates with the html home page and the sqlite3-server )
+  - __init__.py ( An typical empty __init__.py file )
+ - view folder:
+   - home.html ( This html file creates the home page of the application )
+   - buttons.css ( This css file creates the style of the home page )
+
 ## Requirements
 - If you run with Docker you don't need to install any requirements. Docker will make it automatically for you.
 - If you run from terminal you need to install:
-  1. Flask
-  2. openai
+  - Flask
+  - openai
 
 ## How To Run
 - If you run the application from visual studio:

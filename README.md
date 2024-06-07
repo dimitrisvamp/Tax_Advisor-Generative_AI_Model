@@ -36,6 +36,25 @@ to user below the "SUBMIT" and "ADVICE NOW" buttons.
   1. Flask
   2. openai
 
+## How To Run
+- If you run the application from visual studio:
+  - Open the RestAPI.py file to vs code 
+  - Press the run button
+  - Open your localhost at the 5000 port and the home page will show up or copy the link of your localhost from your terminal and paste it to your browser.
+- If you run the applicantion from terminal:
+  - Open terminal
+  - Run to your terminal:
+    - cd yourPathDirectory/model
+    - python RestAPI.py
+  - Open your localhost at the 5000 port and the home page will show up or copy the link of your localhost from your terminal and paste it to your browser.
+- If you run the applicantion from Docker:
+  - Open terminal
+  - Run to your terminal:
+    - cd yourPathDirectory (where the Dockerfile exists)
+    - docker build -t tax_advisor .
+    - docker run -p 5000:5000 tax_advisor
+  - Open your localhost at the 5000 port and the home page will show up or copy the link of your localhost from your terminal and paste it to your browser.
+
 
 
 

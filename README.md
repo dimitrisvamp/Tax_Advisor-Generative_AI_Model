@@ -23,7 +23,7 @@ Once you press the "SUBMIT" button the user will notice that the web page is sta
 button, are going to be inserted three values (income value, expenses value, advice). The application uses REST API, implemented with 
 flask ( https://flask.palletsprojects.com/en/3.0.x/ ) and specifically "POST" endpoint, to get the income and expenses values 
 from html file.  Then the application utilizes the generative AI model to generate an advice based on theese values.
-TThen theese vaules (income, expenses, advice) are inserted into database  <br>
+Subsequently theese vaules (income, expenses, advice) are inserted into database  <br>
 
 After the page refreshes, the user should press the "ADVICE NOW" button. Because the advice is already generated,
 the only thing that application should do is to select the advice from the database, which advice is related 

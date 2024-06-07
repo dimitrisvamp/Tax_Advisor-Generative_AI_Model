@@ -14,7 +14,7 @@ There are two placeholders, "Income" placeholder and "Expenses" placeholder, and
 "SUBMIT" button and "ADVICE NOW" button. With theese placeholders and buttons the user interacts 
 with the application. First the user should type the amount of his income (integer value e.g 85000) 
 and the amount of his epxenses (integer value e.g 16000). If the user dont type a value to the placeholder 
-the application and the presses the "SUBMIT" button the application will point out that you should fill
+and then presses the "SUBMIT" button the application will point out that you should fill
 the empty placeholder. <br>
 
 By filling both placeholders, the user should press the "SUBMIT" button to submit his inputs to sqlite3 database.

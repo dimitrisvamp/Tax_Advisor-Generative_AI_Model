@@ -7,6 +7,7 @@ A project assignment for entry level position.
 A web application that utilizes a generative AI model from openai( https://openai.com/ ) 
 to provide tax advice to users. <br>
 
+## Usage
 More specifically, when the application pops out to your browser, the application provides to you
 some instructions on how to use the application. <br>
 

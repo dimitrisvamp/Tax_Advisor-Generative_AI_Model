@@ -24,7 +24,8 @@ def getAdvice(income, expenses):
     print('\nThis may take a few seconds, please wait!\n')
     response = openai.chat.completions.create(
         model='gpt-4-turbo-2024-04-09',  # Specify the engine
-        messages=[{"role": "user", "content": prompt}],   # User's input
+        messages=[{"role": "system", "content": "You are a tax advisor."},
+                  {"role": "user", "content": prompt}],   # User's input
         max_tokens=500,  # Adjust the token count as needed
         n=1,             # Number of output responses
         temperature=0.7, 

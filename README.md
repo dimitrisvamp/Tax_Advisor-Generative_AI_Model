@@ -7,6 +7,12 @@ A project assignment for entry level position.
 A web application that utilizes a generative AI model from openai( https://openai.com/ ) 
 to provide tax advice to users. <br>
 
+## Requirements
+- If you run with Docker you don't need to install any requirements. Docker will make it automatically for you.
+- If you run from terminal you need to install:
+  - Flask
+  - openai
+
 ## Usage
 More specifically, when the application pops out to your browser, the application provides to you
 some instructions on how to use the application. <br>
@@ -42,12 +48,6 @@ to user below the "SUBMIT" and "ADVICE NOW" buttons.
  - view folder:
    - home.html ( This html file creates the home page of the application )
    - buttons.css ( This css file creates the style of the home page )
-
-## Requirements
-- If you run with Docker you don't need to install any requirements. Docker will make it automatically for you.
-- If you run from terminal you need to install:
-  - Flask
-  - openai
 
 ## How To Run
 - If you run the application from visual studio:
